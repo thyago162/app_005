@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\VeiculoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('veiculos/find/{search}', [VeiculoController::class, 'find']);
+Route::resource('veiculos', VeiculoController::class);
