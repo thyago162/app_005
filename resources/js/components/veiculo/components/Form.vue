@@ -22,7 +22,7 @@
       </b-form-group>
 
       <b-form-group label="Ano">
-        <b-form-input v-model="form.ano"></b-form-input>
+        <b-form-input v-model="form.ano" type="number"></b-form-input>
       </b-form-group>
 
       <b-form-group label="Descrição">
